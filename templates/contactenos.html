@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- formulario de contacto en html y css -->  
+
+<div class="contact_form">
+
+    <div class="formulario">      
+      <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+
+        <form action="{{url_for('procesar')}}" method="POST">
+
+        <input name="nombre" required type="text" placeholder="Nombre">
+        <br><br>
+        <input name="apellido" required type="text" placeholder="Apellido">
+        <br><br>  
+        <input name="email" required type="text" placeholder="Email">
+        <br><br>
+        <input name="edad" required type="number" placeholder="Edad">
+        <br><br>
+        <p>Comentario: <br/>
+            <textarea name="comentario" rows="5" cols="50">Deje aquí su comentario </textarea></p>
+        <input type="submit" value="Enviar">
+        </form>
+    </div>  
+</div>
+{% endblock %} 
